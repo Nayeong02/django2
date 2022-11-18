@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
+</head>
+<body>
+    <h1>회원정보</h1>
+    <table class="w3-table-all w3-hoverable">
+        <tr>
+            <th>회원ID</th>
+            <th>성</th>
+            <th>이름</th>
+        </tr>
+        {% for x in m %}
+        <tr>
+            <td>{{ x.id }}</td>
+            <td>{{ x.firstname}} </td>
+            <td>{{ x.lastname}} </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+</body>
+</html>
