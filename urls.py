@@ -20,5 +20,6 @@ from product import views #views를 import
 urlpatterns = [
     path('', views.product, name='product'),
     path('add/', views.add),
-
+    path('add/addrecord', views.addrecord),
+    path('delete/<int:id>', views.delete),
 ]
